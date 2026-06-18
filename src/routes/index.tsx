@@ -1,5 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, ChevronRight, CheckCircle2 } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { MapPin, ChevronRight, CheckCircle2, ArrowUpRight } from "lucide-react";
 import dishwasherAsset from "@/assets/tech-dishwasher.png.asset.json";
 import washerAsset from "@/assets/tech-washer.png.asset.json";
 import stoveAsset from "@/assets/stove.jpg.asset.json";
@@ -183,6 +183,56 @@ function Index() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="mx-auto max-w-[1400px] px-4 py-16 md:py-24 lg:py-28">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
+            Services
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-[#1f6a4d]">
+            We proudly provide appliance repair services across Maryland, including:
+          </p>
+        </div>
+
+        <ul className="mx-auto mt-12 grid max-w-[1100px] grid-cols-1 gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-5">
+          {[
+            "Oven Repair",
+            "Freezer Repair",
+            "Refrigerator Repair",
+            "Stove Repair",
+            "Dishwasher Repair",
+            "Washer Repair",
+            "Dryer Repair",
+            "Wine Cooler Repair",
+            "Microwave Repair",
+            "Wall Oven Repair",
+          ].map((name) => {
+            const slug = name.toLowerCase().replace(/\s+/g, "-");
+            return (
+              <li key={name}>
+                <Link
+                  to="/services/$service"
+                  params={{ service: slug }}
+                  className="group flex items-center justify-between gap-4 rounded-2xl border border-[#0f4d3a]/10 bg-white px-6 py-5 shadow-[0_4px_18px_-12px_rgba(15,77,58,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0f4d3a]/25 hover:shadow-[0_14px_32px_-18px_rgba(15,77,58,0.4)]"
+                >
+                  <span className="flex items-center gap-3">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#a8d8c4] text-[#0f4d3a] transition-colors group-hover:bg-[#0f4d3a] group-hover:text-white">
+                      <ChevronRight className="h-5 w-5" strokeWidth={3} />
+                    </span>
+                    <span className="text-lg font-semibold text-[#0f4d3a]">
+                      {name}
+                    </span>
+                  </span>
+                  <ArrowUpRight
+                    className="h-5 w-5 text-[#1f6a4d] opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+                    strokeWidth={2.5}
+                  />
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </section>
     </main>
   );
