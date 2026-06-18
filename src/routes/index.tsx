@@ -125,7 +125,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main className="min-h-screen bg-[#f7f6f0]">
-      <section className="mx-auto max-w-[1400px] px-4 py-10 md:py-16 lg:py-20">
+      <section id="hero" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-10 md:py-16 lg:py-20">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.2fr_1fr] lg:items-center lg:gap-8">
           {/* Left image */}
           <div className="order-2 lg:order-1">
@@ -191,7 +191,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1400px] px-4 py-16 md:py-24 lg:py-28">
+      <section id="why-choose-us" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-16 md:py-24 lg:py-28">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <img
@@ -250,7 +250,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1400px] px-4 py-16 md:py-24 lg:py-28">
+      <section id="services" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-16 md:py-24 lg:py-28">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
             Services
@@ -300,7 +300,7 @@ function Index() {
         </ul>
       </section>
 
-      <section className="mx-auto max-w-[1400px] px-4 py-16 md:py-24 lg:py-28">
+      <section id="testimonials" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-16 md:py-24 lg:py-28">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
             Testimonials
