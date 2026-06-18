@@ -3,6 +3,45 @@ import { MapPin, ChevronRight, CheckCircle2 } from "lucide-react";
 import dishwasherAsset from "@/assets/tech-dishwasher.png.asset.json";
 import washerAsset from "@/assets/tech-washer.png.asset.json";
 import stoveAsset from "@/assets/stove.jpg.asset.json";
+import lg from "@/assets/brands/lg.png.asset.json";
+import hotpoint from "@/assets/brands/hotpoint.png.asset.json";
+import magicchef from "@/assets/brands/magicchef.png.asset.json";
+import whirlpool from "@/assets/brands/whirlpool.png.asset.json";
+import haier from "@/assets/brands/haier.png.asset.json";
+import maytag from "@/assets/brands/maytag.png.asset.json";
+import kenmore from "@/assets/brands/kenmore.png.asset.json";
+import bosch from "@/assets/brands/bosch.png.asset.json";
+import electrolux from "@/assets/brands/electrolux.png.asset.json";
+import subzero from "@/assets/brands/subzero.png.asset.json";
+import jennair from "@/assets/brands/jennair.png.asset.json";
+import samsung from "@/assets/brands/samsung.png.asset.json";
+import viking from "@/assets/brands/viking.png.asset.json";
+import kitchenaid from "@/assets/brands/kitchenaid.png.asset.json";
+import monogram from "@/assets/brands/monogram.png.asset.json";
+import wolf from "@/assets/brands/wolf.png.asset.json";
+import frigidaire from "@/assets/brands/frigidaire.png.asset.json";
+import thermador from "@/assets/brands/thermador.png.asset.json";
+
+const BRANDS = [
+  { name: "LG", src: lg.url },
+  { name: "Hotpoint", src: hotpoint.url },
+  { name: "Magic Chef", src: magicchef.url },
+  { name: "Whirlpool", src: whirlpool.url },
+  { name: "Haier", src: haier.url },
+  { name: "Maytag", src: maytag.url },
+  { name: "Kenmore", src: kenmore.url },
+  { name: "Bosch", src: bosch.url },
+  { name: "Electrolux", src: electrolux.url },
+  { name: "Sub-Zero", src: subzero.url },
+  { name: "JennAir", src: jennair.url },
+  { name: "Samsung", src: samsung.url },
+  { name: "Viking", src: viking.url },
+  { name: "KitchenAid", src: kitchenaid.url },
+  { name: "Monogram", src: monogram.url },
+  { name: "Wolf", src: wolf.url },
+  { name: "Frigidaire", src: frigidaire.url },
+  { name: "Thermador", src: thermador.url },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
