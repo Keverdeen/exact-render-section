@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MapPin, ChevronRight, CheckCircle2, ArrowUpRight } from "lucide-react";
+import { MapPin, ChevronRight, CheckCircle2, ArrowUpRight, Star, Quote } from "lucide-react";
+import { testimonials } from "@/content/testimonials";
 import dishwasherAsset from "@/assets/tech-dishwasher.png.asset.json";
 import washerAsset from "@/assets/tech-washer.png.asset.json";
 import stoveAsset from "@/assets/stove.jpg.asset.json";
@@ -234,6 +235,81 @@ function Index() {
           })}
         </ul>
       </section>
+
+      <section className="mx-auto max-w-[1400px] px-4 py-16 md:py-24 lg:py-28">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
+            Testimonials
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-[#1f6a4d]">
+            See what our customers say about our appliance repair services across Maryland.
+          </p>
+        </div>
+
+        {/* Mobile: horizontal snap carousel. Desktop: grid. */}
+        <div className="mt-12 lg:mt-16">
+          <div className="-mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 md:hidden">
+            {[...testimonials]
+              .sort((a, b) => a.order - b.order)
+              .map((t) => (
+                <TestimonialCard key={t.id} t={t} className="w-[85%] shrink-0 snap-center" />
+              ))}
+          </div>
+
+          <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
+            {[...testimonials]
+              .sort((a, b) => a.order - b.order)
+              .map((t) => (
+                <TestimonialCard key={t.id} t={t} />
+              ))}
+          </div>
+        </div>
+      </section>
     </main>
+  );
+}
+
+function TestimonialCard({
+  t,
+  className = "",
+}: {
+  t: (typeof testimonials)[number];
+  className?: string;
+}) {
+  return (
+    <article
+      className={`group relative flex h-full flex-col rounded-2xl border border-[#0f4d3a]/10 bg-white p-7 shadow-[0_4px_18px_-12px_rgba(15,77,58,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0f4d3a]/25 hover:shadow-[0_14px_32px_-18px_rgba(15,77,58,0.4)] ${className}`}
+    >
+      <Quote
+        className="absolute right-6 top-6 h-8 w-8 text-[#a8d8c4]"
+        strokeWidth={1.5}
+        aria-hidden="true"
+      />
+
+      <div className="flex items-center gap-1" aria-label={`${t.rating} out of 5 stars`}>
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star
+            key={i}
+            className={
+              i < t.rating
+                ? "h-5 w-5 fill-[#1f6a4d] text-[#1f6a4d]"
+                : "h-5 w-5 text-[#1f6a4d]/25"
+            }
+            strokeWidth={1.5}
+          />
+        ))}
+      </div>
+
+      <p className="mt-5 flex-1 text-[15px] leading-relaxed text-[#0f4d3a]">
+        "{t.review}"
+      </p>
+
+      <div className="mt-6 border-t border-[#0f4d3a]/10 pt-5">
+        <p className="text-base font-semibold text-[#0f4d3a]">{t.name}</p>
+        {t.location && (
+          <p className="mt-0.5 text-sm text-[#1f6a4d]">{t.location}</p>
+        )}
+      </div>
+    </article>
   );
 }
