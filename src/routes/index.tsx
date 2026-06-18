@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, ChevronRight } from "lucide-react";
+import { MapPin, ChevronRight, CheckCircle2 } from "lucide-react";
 import dishwasherAsset from "@/assets/tech-dishwasher.png.asset.json";
 import washerAsset from "@/assets/tech-washer.png.asset.json";
+import stoveAsset from "@/assets/stove.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -82,6 +83,43 @@ function Index() {
               alt="Technician inspecting a washing machine"
               className="h-[420px] w-full rounded-3xl object-cover sm:h-[520px] lg:h-[640px]"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1400px] px-4 py-16 md:py-24 lg:py-28">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <img
+              src={stoveAsset.url}
+              alt="Modern stainless steel gas range in a kitchen"
+              className="h-[360px] w-full rounded-3xl object-cover shadow-[0_20px_60px_-30px_rgba(15,77,58,0.45)] sm:h-[480px] lg:h-[600px]"
+            />
+          </div>
+
+          <div className="lg:pl-4">
+            <h2 className="text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
+              Why choose us
+            </h2>
+
+            <ul className="mt-10 max-w-[560px] space-y-7">
+              {[
+                "Same-day service available",
+                "Experienced, certified technicians",
+                "Repairs for refrigerators, ovens, washers, dryers, dishwashers, and more",
+                "Honest pricing with no hidden fees",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-4">
+                  <CheckCircle2
+                    className="mt-0.5 h-7 w-7 shrink-0 text-[#1f6a4d]"
+                    strokeWidth={2}
+                  />
+                  <span className="text-lg leading-relaxed text-[#0f4d3a]">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
