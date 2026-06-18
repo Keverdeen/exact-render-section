@@ -337,7 +337,7 @@ function TestimonialCard({
   t,
   className = "",
 }: {
-  t: (typeof testimonials)[number];
+  t: Testimonial;
   className?: string;
 }) {
   return (
