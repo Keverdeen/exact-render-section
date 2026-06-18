@@ -8,7 +8,7 @@ function ServicePlaceholder() {
   const { service } = Route.useParams();
   const title = service
     .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .map((w: string) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 
   return (
