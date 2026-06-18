@@ -172,13 +172,13 @@ function Index() {
           {BRANDS.map((b) => (
             <div
               key={b.name}
-              className="group flex aspect-[16/9] items-center justify-center rounded-2xl border border-[#0f4d3a]/8 bg-white p-6 shadow-[0_4px_18px_-12px_rgba(15,77,58,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_-16px_rgba(15,77,58,0.35)]"
+              className="group flex aspect-[16/9] items-center justify-center rounded-2xl border border-[#0f4d3a]/8 bg-white p-2 shadow-[0_4px_18px_-12px_rgba(15,77,58,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_-16px_rgba(15,77,58,0.35)]"
             >
               <img
                 src={b.src}
                 alt={`${b.name} logo`}
                 loading="lazy"
-                className="max-h-[85%] max-w-[90%] object-contain"
+                className="max-h-[75%] max-w-[85%] object-contain"
               />
             </div>
           ))}
