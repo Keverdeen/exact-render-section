@@ -313,7 +313,7 @@ function Index() {
         {/* Mobile: horizontal snap carousel. Desktop: grid. */}
         <div className="mt-12 lg:mt-16">
           <div className="-mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 md:hidden">
-            {[...testimonials]
+            {[...TESTIMONIALS]
               .sort((a, b) => a.order - b.order)
               .map((t) => (
                 <TestimonialCard key={t.id} t={t} className="w-[85%] shrink-0 snap-center" />
@@ -321,7 +321,7 @@ function Index() {
           </div>
 
           <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
-            {[...testimonials]
+            {[...TESTIMONIALS]
               .sort((a, b) => a.order - b.order)
               .map((t) => (
                 <TestimonialCard key={t.id} t={t} />
