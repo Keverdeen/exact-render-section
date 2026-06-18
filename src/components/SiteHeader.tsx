@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, MapPin, Wrench } from "lucide-react";
+import { Menu, X, Phone, MapPin } from "lucide-react";
+import logoAsset from "@/assets/logo-tatenergy.png.asset.json";
 
 const NAV_ITEMS = [
   { label: "Home", href: "#hero" },
@@ -45,20 +46,14 @@ export function SiteHeader() {
         <a
           href="#hero"
           onClick={(e) => handleNavClick(e, "#hero")}
-          className="flex shrink-0 items-center gap-2.5 text-[#0f4d3a]"
-          aria-label="Maryland Appliance Repair — Home"
+          className="flex shrink-0 items-center"
+          aria-label="TATENERGY Appliance Repair — Home"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0f4d3a] text-white">
-            <Wrench className="h-5 w-5" strokeWidth={2.5} />
-          </span>
-          <span className="flex flex-col leading-tight">
-            <span className="text-base font-extrabold tracking-tight sm:text-lg">
-              MD Appliance Repair
-            </span>
-            <span className="hidden text-[11px] font-medium uppercase tracking-[0.14em] text-[#1f6a4d] sm:block">
-              Fast &amp; Reliable Service
-            </span>
-          </span>
+          <img
+            src={logoAsset.url}
+            alt="TATENERGY Appliance Repair"
+            className="h-12 w-auto sm:h-14"
+          />
         </a>
 
         {/* Desktop nav */}
