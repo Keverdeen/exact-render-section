@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, ChevronRight } from "lucide-react";
+import { MapPin, ChevronRight, CheckCircle2 } from "lucide-react";
 import dishwasherAsset from "@/assets/tech-dishwasher.png.asset.json";
 import washerAsset from "@/assets/tech-washer.png.asset.json";
+import stoveAsset from "@/assets/stove.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
