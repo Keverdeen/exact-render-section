@@ -162,6 +162,28 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <section className="mx-auto max-w-[1400px] px-4 py-16 md:py-24 lg:py-28">
+        <h2 className="text-center text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
+          Trusted by Leading Brands
+        </h2>
+
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 md:grid-cols-4 lg:mt-16 lg:grid-cols-5 lg:gap-6">
+          {BRANDS.map((b) => (
+            <div
+              key={b.name}
+              className="group flex aspect-[16/9] items-center justify-center rounded-2xl border border-[#0f4d3a]/8 bg-white p-6 shadow-[0_4px_18px_-12px_rgba(15,77,58,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_-16px_rgba(15,77,58,0.35)]"
+            >
+              <img
+                src={b.src}
+                alt={`${b.name} logo`}
+                loading="lazy"
+                className="max-h-[60%] max-w-[75%] object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
