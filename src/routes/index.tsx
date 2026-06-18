@@ -178,7 +178,7 @@ function Index() {
                 src={b.src}
                 alt={`${b.name} logo`}
                 loading="lazy"
-                className="max-h-[60%] max-w-[75%] object-contain"
+                className="max-h-[85%] max-w-[90%] object-contain"
               />
             </div>
           ))}
