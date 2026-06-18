@@ -1,6 +1,70 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, ChevronRight, CheckCircle2, ArrowUpRight, Star, Quote } from "lucide-react";
-import { testimonials } from "@/content/testimonials";
+type Testimonial = {
+  id: string;
+  name: string;
+  location?: string;
+  review: string;
+  rating: 1 | 2 | 3 | 4 | 5;
+  order: number;
+};
+
+const TESTIMONIALS: Testimonial[] = [
+  {
+    id: "1",
+    name: "Sarah Mitchell",
+    location: "Bethesda, MD",
+    review:
+      "My fridge stopped cooling on a Saturday morning and they were at my door by the afternoon. Honest pricing and fixed it on the first visit. Couldn't ask for better service.",
+    rating: 5,
+    order: 1,
+  },
+  {
+    id: "2",
+    name: "David Hernandez",
+    location: "Silver Spring, MD",
+    review:
+      "Technician was professional, walked me through the issue with my washer, and gave me a fair quote up front. Repair was quick and the machine has worked perfectly since.",
+    rating: 5,
+    order: 2,
+  },
+  {
+    id: "3",
+    name: "Emily Carter",
+    location: "Rockville, MD",
+    review:
+      "Called for an oven repair and they had it running again the same day. No hidden fees, no upsell — just great work. I'll definitely call them again.",
+    rating: 5,
+    order: 3,
+  },
+  {
+    id: "4",
+    name: "Michael Thompson",
+    location: "Columbia, MD",
+    review:
+      "Got my dishwasher repaired after another company quoted me a replacement. Saved me hundreds. Super knowledgeable team — highly recommend.",
+    rating: 5,
+    order: 4,
+  },
+  {
+    id: "5",
+    name: "Jessica Nguyen",
+    location: "Annapolis, MD",
+    review:
+      "Wine cooler was warming up and they diagnosed and fixed it in one trip. Clean, courteous, and on time. Five stars.",
+    rating: 5,
+    order: 5,
+  },
+  {
+    id: "6",
+    name: "Robert Patel",
+    location: "Frederick, MD",
+    review:
+      "Dryer wasn't heating and they came out the next morning. Friendly tech, fair price, no surprises. This is my go-to appliance repair company now.",
+    rating: 5,
+    order: 6,
+  },
+];
 import dishwasherAsset from "@/assets/tech-dishwasher.png.asset.json";
 import washerAsset from "@/assets/tech-washer.png.asset.json";
 import stoveAsset from "@/assets/stove.jpg.asset.json";
@@ -249,7 +313,7 @@ function Index() {
         {/* Mobile: horizontal snap carousel. Desktop: grid. */}
         <div className="mt-12 lg:mt-16">
           <div className="-mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 md:hidden">
-            {[...testimonials]
+            {[...TESTIMONIALS]
               .sort((a, b) => a.order - b.order)
               .map((t) => (
                 <TestimonialCard key={t.id} t={t} className="w-[85%] shrink-0 snap-center" />
@@ -257,7 +321,7 @@ function Index() {
           </div>
 
           <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
-            {[...testimonials]
+            {[...TESTIMONIALS]
               .sort((a, b) => a.order - b.order)
               .map((t) => (
                 <TestimonialCard key={t.id} t={t} />
@@ -273,7 +337,7 @@ function TestimonialCard({
   t,
   className = "",
 }: {
-  t: (typeof testimonials)[number];
+  t: Testimonial;
   className?: string;
 }) {
   return (
