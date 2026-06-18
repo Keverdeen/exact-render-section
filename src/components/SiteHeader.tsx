@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, MapPin, Wrench } from "lucide-react";
+import { Menu, X, Phone, MapPin } from "lucide-react";
+import logoAsset from "@/assets/logo.png.asset.json";
 
 const NAV_ITEMS = [
   { label: "Home", href: "#hero" },
