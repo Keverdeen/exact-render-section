@@ -3,6 +3,45 @@ import { MapPin, ChevronRight, CheckCircle2 } from "lucide-react";
 import dishwasherAsset from "@/assets/tech-dishwasher.png.asset.json";
 import washerAsset from "@/assets/tech-washer.png.asset.json";
 import stoveAsset from "@/assets/stove.jpg.asset.json";
+import lg from "@/assets/brands/lg.png.asset.json";
+import hotpoint from "@/assets/brands/hotpoint.png.asset.json";
+import magicchef from "@/assets/brands/magicchef.png.asset.json";
+import whirlpool from "@/assets/brands/whirlpool.png.asset.json";
+import haier from "@/assets/brands/haier.png.asset.json";
+import maytag from "@/assets/brands/maytag.png.asset.json";
+import kenmore from "@/assets/brands/kenmore.png.asset.json";
+import bosch from "@/assets/brands/bosch.png.asset.json";
+import electrolux from "@/assets/brands/electrolux.png.asset.json";
+import subzero from "@/assets/brands/subzero.png.asset.json";
+import jennair from "@/assets/brands/jennair.png.asset.json";
+import samsung from "@/assets/brands/samsung.png.asset.json";
+import viking from "@/assets/brands/viking.png.asset.json";
+import kitchenaid from "@/assets/brands/kitchenaid.png.asset.json";
+import monogram from "@/assets/brands/monogram.png.asset.json";
+import wolf from "@/assets/brands/wolf.png.asset.json";
+import frigidaire from "@/assets/brands/frigidaire.png.asset.json";
+import thermador from "@/assets/brands/thermador.png.asset.json";
+
+const BRANDS = [
+  { name: "LG", src: lg.url },
+  { name: "Hotpoint", src: hotpoint.url },
+  { name: "Magic Chef", src: magicchef.url },
+  { name: "Whirlpool", src: whirlpool.url },
+  { name: "Haier", src: haier.url },
+  { name: "Maytag", src: maytag.url },
+  { name: "Kenmore", src: kenmore.url },
+  { name: "Bosch", src: bosch.url },
+  { name: "Electrolux", src: electrolux.url },
+  { name: "Sub-Zero", src: subzero.url },
+  { name: "JennAir", src: jennair.url },
+  { name: "Samsung", src: samsung.url },
+  { name: "Viking", src: viking.url },
+  { name: "KitchenAid", src: kitchenaid.url },
+  { name: "Monogram", src: monogram.url },
+  { name: "Wolf", src: wolf.url },
+  { name: "Frigidaire", src: frigidaire.url },
+  { name: "Thermador", src: thermador.url },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -121,6 +160,28 @@ function Index() {
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1400px] px-4 py-16 md:py-24 lg:py-28">
+        <h2 className="text-center text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
+          Trusted by Leading Brands
+        </h2>
+
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 md:grid-cols-4 lg:mt-16 lg:grid-cols-5 lg:gap-6">
+          {BRANDS.map((b) => (
+            <div
+              key={b.name}
+              className="group flex aspect-[16/9] items-center justify-center rounded-2xl border border-[#0f4d3a]/8 bg-white p-6 shadow-[0_4px_18px_-12px_rgba(15,77,58,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_-16px_rgba(15,77,58,0.35)]"
+            >
+              <img
+                src={b.src}
+                alt={`${b.name} logo`}
+                loading="lazy"
+                className="max-h-[60%] max-w-[75%] object-contain"
+              />
+            </div>
+          ))}
         </div>
       </section>
     </main>
