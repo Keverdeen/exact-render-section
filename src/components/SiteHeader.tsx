@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, MapPin } from "lucide-react";
-import logoAsset from "@/assets/logo.png.asset.json";
+import { Menu, X, Phone, MapPin, Wrench } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "Home", href: "#hero" },
@@ -46,14 +45,20 @@ export function SiteHeader() {
         <a
           href="#hero"
           onClick={(e) => handleNavClick(e, "#hero")}
-          className="flex shrink-0 items-center"
-          aria-label="Tatenergy Appliance Repair — Home"
+          className="flex shrink-0 items-center gap-2.5 text-[#0f4d3a]"
+          aria-label="Maryland Appliance Repair — Home"
         >
-          <img
-            src={logoAsset.url}
-            alt="Tatenergy Appliance Repair"
-            className="h-10 w-auto sm:h-12"
-          />
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0f4d3a] text-white">
+            <Wrench className="h-5 w-5" strokeWidth={2.5} />
+          </span>
+          <span className="flex flex-col leading-tight">
+            <span className="text-base font-extrabold tracking-tight sm:text-lg">
+              MD Appliance Repair
+            </span>
+            <span className="hidden text-[11px] font-medium uppercase tracking-[0.14em] text-[#1f6a4d] sm:block">
+              Fast &amp; Reliable Service
+            </span>
+          </span>
         </a>
 
         {/* Desktop nav */}
