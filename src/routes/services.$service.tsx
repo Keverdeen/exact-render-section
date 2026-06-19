@@ -2,6 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import ovenImage from "@/assets/oven_repair.jpg.asset.json";
 import freezerImage from "@/assets/freezer_repair.jpg.asset.json";
+import stoveImage from "@/assets/stove_repair.jpg.asset.json";
+import dishwasherImage from "@/assets/dishwasher_repair.jpg.asset.json";
+import washerImage from "@/assets/washer_repair.jpg.asset.json";
+import dryerImage from "@/assets/dryer_repair.jpg.asset.json";
+import wineCoolerImage from "@/assets/wine_cooler_repair.jpg.asset.json";
+import microwaveImage from "@/assets/microwave_repair.jpg.asset.json";
+import wallOvenImage from "@/assets/wall_oven_repair.jpg.asset.json";
 import placeholderImage from "@/assets/stove.jpg.asset.json";
 
 export const Route = createFileRoute("/services/$service")({
