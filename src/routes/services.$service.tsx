@@ -43,6 +43,30 @@ const serviceContent: Record<
     imageUrl: ovenImage.url,
     imageAlt: "Oven Repair service",
   },
+  "freezer-repair": {
+    title: "Freezer Repair",
+    description: (
+      <>
+        <p>
+          A broken freezer can lead to spoiled food and costly waste. Our experienced technicians provide professional freezer repair services for residential and commercial customers, restoring proper cooling and performance quickly.
+        </p>
+        <p>
+          We service all major freezer brands and models and help prevent food loss with prompt and reliable repairs.
+        </p>
+      </>
+    ),
+    bulletsHeading: "Common Freezer Problems We Repair:",
+    bullets: [
+      "Freezer not freezing",
+      "Excessive frost buildup",
+      "Water leaks",
+      "Loud or unusual noises",
+      "Faulty thermostat",
+      "Compressor issues",
+    ],
+    imageUrl: freezerImage.url,
+    imageAlt: "Freezer Repair service",
+  },
 };
 
 function ServicePage() {
