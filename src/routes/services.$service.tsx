@@ -256,7 +256,7 @@ function ServicePage() {
         bullets={content.bullets}
         bulletsHeading={content.bulletsHeading}
         ctaLabel="Request Service"
-        ctaHref="tel:+10000000000"
+        ctaHref="tel:+12408861465"
         imageUrl={content.imageUrl}
         imageAlt={content.imageAlt}
       />

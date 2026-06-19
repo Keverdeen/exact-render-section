@@ -167,7 +167,7 @@ function Index() {
             </div>
 
             <a
-              href="tel:+1"
+              href="tel:+12408861465"
               className="mt-10 inline-flex items-center gap-3 rounded-full bg-[#0f4d3a] py-4 pl-8 pr-3 text-lg font-semibold text-white transition-colors hover:bg-[#0a3b2c]"
             >
               Call now

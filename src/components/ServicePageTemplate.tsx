@@ -19,7 +19,7 @@ export function ServicePageTemplate({
   bullets = [],
   bulletsHeading,
   ctaLabel = "Request Service",
-  ctaHref = "tel:+10000000000",
+  ctaHref = "tel:+12408861465",
   imageUrl,
   imageAlt = "",
 }: ServicePageTemplateProps) {
