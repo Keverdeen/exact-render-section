@@ -4,8 +4,9 @@ import { CheckCircle2 } from "lucide-react";
 
 export type ServicePageTemplateProps = {
   title: string;
-  description: string;
+  description: ReactNode;
   bullets?: string[];
+  bulletsHeading?: string;
   ctaLabel?: string;
   ctaHref?: string;
   imageUrl: string;
