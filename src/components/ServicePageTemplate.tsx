@@ -55,12 +55,12 @@ export function ServicePageTemplate({
             )}
 
             <div className="mt-8">
-              <Link
-                to={ctaHref}
+            <a
+                href={ctaHref}
                 className="inline-flex items-center justify-center rounded-full bg-[#0f4d3a] px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-[#0c3d2e]"
               >
                 {ctaLabel}
-              </Link>
+              </a>
             </div>
           </div>
 
