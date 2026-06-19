@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Link } from "@tanstack/react-router";
+
 import { CheckCircle2 } from "lucide-react";
 
 export type ServicePageTemplateProps = {
@@ -19,7 +19,7 @@ export function ServicePageTemplate({
   bullets = [],
   bulletsHeading,
   ctaLabel = "Request Service",
-  ctaHref = "tel:+10000000000",
+  ctaHref = "tel:+12408861465",
   imageUrl,
   imageAlt = "",
 }: ServicePageTemplateProps) {
@@ -55,12 +55,12 @@ export function ServicePageTemplate({
             )}
 
             <div className="mt-8">
-              <Link
-                to={ctaHref}
+            <a
+                href={ctaHref}
                 className="inline-flex items-center justify-center rounded-full bg-[#0f4d3a] px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-[#0c3d2e]"
               >
                 {ctaLabel}
-              </Link>
+              </a>
             </div>
           </div>
 
