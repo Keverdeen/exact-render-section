@@ -1,10 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
+import ServicePageTemplate from "@/components/ServicePageTemplate";
+import placeholderImage from "@/assets/stove.jpg.asset.json";
 
 export const Route = createFileRoute("/services/$service")({
-  component: ServicePlaceholder,
+  component: ServicePage,
 });
 
-function ServicePlaceholder() {
+function ServicePage() {
   const { service } = Route.useParams();
   const title = service
     .split("-")
@@ -12,15 +14,18 @@ function ServicePlaceholder() {
     .join(" ");
 
   return (
-    <main className="min-h-screen bg-[#f7f6f0] px-4 py-24">
-      <div className="mx-auto max-w-2xl text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
-          {title}
-        </h1>
-        <p className="mt-4 text-lg text-[#1f6a4d]">
-          This service page is coming soon.
-        </p>
-      </div>
-    </main>
+    <ServicePageTemplate
+      title={title}
+      description="Short service description goes here. Replace this placeholder with a clear, friendly overview of what the service includes, typical turnaround, and why customers choose us."
+      bullets={[
+        "Benefit or feature placeholder one",
+        "Benefit or feature placeholder two",
+        "Benefit or feature placeholder three",
+      ]}
+      ctaLabel="Request Service"
+      ctaHref="/"
+      imageUrl={placeholderImage.url}
+      imageAlt={`${title} service`}
+    />
   );
 }
