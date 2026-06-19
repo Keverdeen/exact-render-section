@@ -181,7 +181,7 @@ function Index() {
           </div>
 
           {/* Right image */}
-          <div className="order-3">
+          <div className="order-3 hidden md:block">
             <img
               src={washerAsset.url}
               alt="Technician inspecting a washing machine"
