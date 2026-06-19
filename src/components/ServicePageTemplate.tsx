@@ -1,10 +1,12 @@
+import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { CheckCircle2 } from "lucide-react";
 
 export type ServicePageTemplateProps = {
   title: string;
-  description: string;
+  description: ReactNode;
   bullets?: string[];
+  bulletsHeading?: string;
   ctaLabel?: string;
   ctaHref?: string;
   imageUrl: string;
@@ -15,6 +17,7 @@ export function ServicePageTemplate({
   title,
   description,
   bullets = [],
+  bulletsHeading,
   ctaLabel = "Request Service",
   ctaHref = "tel:+10000000000",
   imageUrl,
@@ -29,19 +32,26 @@ export function ServicePageTemplate({
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-[#0f4d3a] sm:text-5xl">
               {title}
             </h1>
-            <p className="mt-5 text-lg leading-relaxed text-[#1f6a4d]">
+            <div className="mt-5 space-y-4 text-lg leading-relaxed text-[#1f6a4d]">
               {description}
-            </p>
+            </div>
 
             {bullets.length > 0 && (
-              <ul className="mt-6 space-y-3">
-                {bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-3 text-[#0f4d3a]">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#0f4d3a]" />
-                    <span className="text-base">{b}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-6">
+                {bulletsHeading && (
+                  <p className="mb-3 text-base font-semibold text-[#0f4d3a]">
+                    {bulletsHeading}
+                  </p>
+                )}
+                <ul className="space-y-3">
+                  {bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-3 text-[#0f4d3a]">
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#0f4d3a]" />
+                      <span className="text-base">{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
 
             <div className="mt-8">
