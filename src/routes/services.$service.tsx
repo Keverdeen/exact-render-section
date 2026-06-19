@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import ovenImage from "@/assets/oven_repair.jpg.asset.json";
+import freezerImage from "@/assets/freezer_repair.jpg.asset.json";
 import placeholderImage from "@/assets/stove.jpg.asset.json";
 
 export const Route = createFileRoute("/services/$service")({
