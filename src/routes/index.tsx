@@ -191,17 +191,19 @@ function Index() {
         </div>
       </section>
 
-      <section id="why-choose-us" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-16 md:py-24 lg:py-28">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
-          <div>
-            <img
-              src={stoveAsset.url}
-              alt="Modern stainless steel gas range in a kitchen"
-              className="h-[360px] w-full rounded-3xl object-cover shadow-[0_20px_60px_-30px_rgba(15,77,58,0.45)] sm:h-[480px] lg:h-[600px]"
-            />
+      <section id="why-choose-us" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-12 md:py-16 lg:py-20">
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-20">
+          <div className="order-2 lg:order-1">
+            <div className="overflow-hidden rounded-3xl shadow-[0_20px_60px_-30px_rgba(15,77,58,0.45)]">
+              <img
+                src={stoveAsset.url}
+                alt="Modern stainless steel gas range in a kitchen"
+                className="h-[280px] w-full object-cover object-center sm:h-[360px] lg:h-[420px]"
+              />
+            </div>
           </div>
 
-          <div className="lg:pl-4">
+          <div className="order-1 lg:order-2 lg:pl-4">
             <h2 className="text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
               Why choose us
             </h2>
