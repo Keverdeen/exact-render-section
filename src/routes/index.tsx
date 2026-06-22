@@ -191,7 +191,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="why-choose-us" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-12 md:py-16 lg:py-20">
+      <section id="why-choose-us" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-9 md:py-11 lg:py-14">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="order-2 lg:order-1">
             <div className="overflow-hidden rounded-3xl shadow-[0_20px_60px_-30px_rgba(15,77,58,0.45)]">
