@@ -252,7 +252,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="services" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-16 md:py-24 lg:py-28">
+      <section id="services" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-11 md:py-16 lg:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
             Services
@@ -305,7 +305,7 @@ function Index() {
         </ul>
       </section>
 
-      <section id="testimonials" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-16 md:py-24 lg:py-28">
+      <section id="testimonials" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-11 md:py-16 lg:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
             Testimonials
