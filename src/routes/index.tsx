@@ -230,7 +230,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1400px] px-4 py-16 md:py-24 lg:py-28">
+      <section className="mx-auto max-w-[1400px] px-4 py-11 md:py-16 lg:py-20">
         <h2 className="text-center text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
           Trusted by Leading Brands
         </h2>
