@@ -26,7 +26,7 @@ export function ServicePageTemplate({
   return (
     <main className="min-h-screen bg-[#f7f6f0]">
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
-        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
           {/* Text */}
           <div className="order-1 min-w-0">
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-[#0f4d3a] sm:text-5xl">
