@@ -276,11 +276,14 @@ function Index() {
             "Wall Oven Repair",
           ].map((name) => {
             const slug = name.toLowerCase().replace(/\s+/g, "-");
+            const isRefrigerator = name === "Refrigerator Repair";
+            const linkProps = isRefrigerator
+              ? ({ to: "/refrigerator-repair" } as const)
+              : ({ to: "/services/$service", params: { service: slug } } as const);
             return (
               <li key={name}>
                 <Link
-                  to="/services/$service"
-                  params={{ service: slug }}
+                  {...linkProps}
                   className="group flex items-center justify-between gap-4 rounded-2xl border border-[#0f4d3a]/10 bg-white px-6 py-5 shadow-[0_4px_18px_-12px_rgba(15,77,58,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0f4d3a]/25 hover:shadow-[0_14px_32px_-18px_rgba(15,77,58,0.4)]"
                 >
                   <span className="flex items-center gap-3">

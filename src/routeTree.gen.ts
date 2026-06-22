@@ -9,9 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RefrigeratorRepairRouteImport } from './routes/refrigerator-repair'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesServiceRouteImport } from './routes/services.$service'
 
+const RefrigeratorRepairRoute = RefrigeratorRepairRouteImport.update({
+  id: '/refrigerator-repair',
+  path: '/refrigerator-repair',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -25,32 +31,43 @@ const ServicesServiceRoute = ServicesServiceRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/refrigerator-repair': typeof RefrigeratorRepairRoute
   '/services/$service': typeof ServicesServiceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/refrigerator-repair': typeof RefrigeratorRepairRoute
   '/services/$service': typeof ServicesServiceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/refrigerator-repair': typeof RefrigeratorRepairRoute
   '/services/$service': typeof ServicesServiceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/services/$service'
+  fullPaths: '/' | '/refrigerator-repair' | '/services/$service'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/services/$service'
-  id: '__root__' | '/' | '/services/$service'
+  to: '/' | '/refrigerator-repair' | '/services/$service'
+  id: '__root__' | '/' | '/refrigerator-repair' | '/services/$service'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  RefrigeratorRepairRoute: typeof RefrigeratorRepairRoute
   ServicesServiceRoute: typeof ServicesServiceRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/refrigerator-repair': {
+      id: '/refrigerator-repair'
+      path: '/refrigerator-repair'
+      fullPath: '/refrigerator-repair'
+      preLoaderRoute: typeof RefrigeratorRepairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  RefrigeratorRepairRoute: RefrigeratorRepairRoute,
   ServicesServiceRoute: ServicesServiceRoute,
 }
 export const routeTree = rootRouteImport
