@@ -55,18 +55,17 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-[#0f4d3a]/10 bg-[#f7f6f0]/85 backdrop-blur supports-[backdrop-filter]:bg-[#f7f6f0]/70">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-4 py-4 lg:py-5">
         {/* Logo */}
-        <a
-          href="#hero"
-          onClick={(e) => handleNavClick(e, "#hero")}
+        <Link
+          to="/"
           className="flex shrink-0 items-center"
           aria-label="TATENERGY Appliance Repair — Home"
         >
           <img
             src={logoAsset.url}
             alt="TATENERGY Appliance Repair"
-            className="h-12 w-auto sm:h-14"
+            className="h-16 w-auto sm:h-20 lg:h-24"
           />
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav
@@ -75,10 +74,10 @@ export function SiteHeader() {
         >
           <ul className="flex items-center gap-1">
             {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
+              <li key={item.section}>
                 <a
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
+                  href={`/#${item.section}`}
+                  onClick={(e) => handleNavClick(e, item.section)}
                   className="relative inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold text-[#0f4d3a] transition-colors after:absolute after:inset-x-4 after:bottom-1 after:h-[2px] after:origin-left after:scale-x-0 after:rounded-full after:bg-[#1f6a4d] after:transition-transform hover:text-[#1f6a4d] hover:after:scale-x-100"
                 >
                   {item.label}
@@ -87,6 +86,7 @@ export function SiteHeader() {
             ))}
           </ul>
         </nav>
+
 
         {/* Contact (desktop) */}
         <div className="hidden shrink-0 items-center gap-5 lg:flex">
