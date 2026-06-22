@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, MapPin } from "lucide-react";
+import { Link, useRouterState, useNavigate } from "@tanstack/react-router";
 import logoAsset from "@/assets/logo-tatenergy-transparent.png.asset.json";
 
 const NAV_ITEMS = [
-  { label: "Home", href: "#hero" },
-  { label: "Services", href: "#services" },
-  { label: "Why Choose Us", href: "#why-choose-us" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Home", section: "hero" },
+  { label: "Services", section: "services" },
+  { label: "Why Choose Us", section: "why-choose-us" },
+  { label: "Testimonials", section: "testimonials" },
 ];
 
 const PHONE_DISPLAY = "+1 (240) 886-1465";
@@ -14,6 +15,9 @@ const PHONE_TEL = "+12408861465";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isHome = pathname === "/";
 
   useEffect(() => {
     if (!open) return;
@@ -26,35 +30,42 @@ export function SiteHeader() {
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
+    section: string,
   ) => {
-    if (!href.startsWith("#")) return;
-    const id = href.slice(1);
-    const el = document.getElementById(id);
-    if (el) {
-      e.preventDefault();
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      setOpen(false);
-      if (history.replaceState) history.replaceState(null, "", href);
+    setOpen(false);
+    if (isHome) {
+      const el = document.getElementById(section);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (history.replaceState) history.replaceState(null, "", `#${section}`);
+      }
+      return;
     }
+    e.preventDefault();
+    navigate({ to: "/", hash: section }).then(() => {
+      setTimeout(() => {
+        const el = document.getElementById(section);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+    });
   };
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#0f4d3a]/10 bg-[#f7f6f0]/85 backdrop-blur supports-[backdrop-filter]:bg-[#f7f6f0]/70">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-4 py-4 lg:py-5">
         {/* Logo */}
-        <a
-          href="#hero"
-          onClick={(e) => handleNavClick(e, "#hero")}
+        <Link
+          to="/"
           className="flex shrink-0 items-center"
           aria-label="TATENERGY Appliance Repair — Home"
         >
           <img
             src={logoAsset.url}
             alt="TATENERGY Appliance Repair"
-            className="h-12 w-auto sm:h-14"
+            className="h-16 w-auto sm:h-20 lg:h-24"
           />
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav
@@ -63,10 +74,10 @@ export function SiteHeader() {
         >
           <ul className="flex items-center gap-1">
             {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
+              <li key={item.section}>
                 <a
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
+                  href={`/#${item.section}`}
+                  onClick={(e) => handleNavClick(e, item.section)}
                   className="relative inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold text-[#0f4d3a] transition-colors after:absolute after:inset-x-4 after:bottom-1 after:h-[2px] after:origin-left after:scale-x-0 after:rounded-full after:bg-[#1f6a4d] after:transition-transform hover:text-[#1f6a4d] hover:after:scale-x-100"
                 >
                   {item.label}
@@ -75,6 +86,7 @@ export function SiteHeader() {
             ))}
           </ul>
         </nav>
+
 
         {/* Contact (desktop) */}
         <div className="hidden shrink-0 items-center gap-5 lg:flex">
@@ -125,10 +137,10 @@ export function SiteHeader() {
         <nav aria-label="Mobile" className="mx-auto max-w-[1400px] px-4 py-4">
           <ul className="flex flex-col gap-1">
             {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
+              <li key={item.section}>
                 <a
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
+                  href={`/#${item.section}`}
+                  onClick={(e) => handleNavClick(e, item.section)}
                   className="block rounded-xl px-4 py-3 text-base font-semibold text-[#0f4d3a] transition-colors hover:bg-[#0f4d3a]/5"
                 >
                   {item.label}
