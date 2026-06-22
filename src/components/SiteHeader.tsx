@@ -15,6 +15,9 @@ const PHONE_TEL = "+12408861465";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isHome = pathname === "/";
 
   useEffect(() => {
     if (!open) return;
@@ -27,17 +30,25 @@ export function SiteHeader() {
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
+    section: string,
   ) => {
-    if (!href.startsWith("#")) return;
-    const id = href.slice(1);
-    const el = document.getElementById(id);
-    if (el) {
-      e.preventDefault();
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      setOpen(false);
-      if (history.replaceState) history.replaceState(null, "", href);
+    setOpen(false);
+    if (isHome) {
+      const el = document.getElementById(section);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (history.replaceState) history.replaceState(null, "", `#${section}`);
+      }
+      return;
     }
+    e.preventDefault();
+    navigate({ to: "/", hash: section }).then(() => {
+      setTimeout(() => {
+        const el = document.getElementById(section);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+    });
   };
 
   return (
