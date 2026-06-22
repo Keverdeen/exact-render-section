@@ -137,10 +137,10 @@ export function SiteHeader() {
         <nav aria-label="Mobile" className="mx-auto max-w-[1400px] px-4 py-4">
           <ul className="flex flex-col gap-1">
             {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
+              <li key={item.section}>
                 <a
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
+                  href={`/#${item.section}`}
+                  onClick={(e) => handleNavClick(e, item.section)}
                   className="block rounded-xl px-4 py-3 text-base font-semibold text-[#0f4d3a] transition-colors hover:bg-[#0f4d3a]/5"
                 >
                   {item.label}
