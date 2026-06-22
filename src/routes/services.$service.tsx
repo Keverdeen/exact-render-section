@@ -9,6 +9,7 @@ import dryerImage from "@/assets/dryer_repair.jpg.asset.json";
 import wineCoolerImage from "@/assets/wine_cooler_repair.jpg.asset.json";
 import microwaveImage from "@/assets/microwave_repair.jpg.asset.json";
 import wallOvenImage from "@/assets/wall_oven_repair.jpg.asset.json";
+import refrigeratorImage from "@/assets/refrigerator_repair.jpg.asset.json";
 import placeholderImage from "@/assets/stove.jpg.asset.json";
 
 export const Route = createFileRoute("/services/$service")({
@@ -73,6 +74,30 @@ const serviceContent: Record<
     ],
     imageUrl: freezerImage.url,
     imageAlt: "Freezer Repair service",
+  },
+  "refrigerator-repair": {
+    title: "Refrigerator Repair",
+    description: (
+      <>
+        <p>
+          A failing refrigerator can lead to spoiled food and costly waste. Our experienced technicians provide fast, reliable refrigerator repair services for all major brands and models, restoring proper cooling and performance.
+        </p>
+        <p>
+          We diagnose and resolve cooling, electrical, and mechanical issues to keep your kitchen running smoothly.
+        </p>
+      </>
+    ),
+    bulletsHeading: "Common Refrigerator Problems We Repair:",
+    bullets: [
+      "Refrigerator not cooling",
+      "Water leaks",
+      "Ice maker not working",
+      "Unusual noises",
+      "Faulty thermostat",
+      "Compressor issues",
+    ],
+    imageUrl: refrigeratorImage.url,
+    imageAlt: "Refrigerator Repair service",
   },
   "stove-repair": {
     title: "Stove Repair",
