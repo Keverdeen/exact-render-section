@@ -191,7 +191,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="why-choose-us" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-12 md:py-16 lg:py-20">
+      <section id="why-choose-us" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-9 md:py-11 lg:py-14">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="order-2 lg:order-1">
             <div className="overflow-hidden rounded-3xl shadow-[0_20px_60px_-30px_rgba(15,77,58,0.45)]">
@@ -230,7 +230,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1400px] px-4 py-16 md:py-24 lg:py-28">
+      <section className="mx-auto max-w-[1400px] px-4 py-11 md:py-16 lg:py-20">
         <h2 className="text-center text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
           Trusted by Leading Brands
         </h2>
@@ -252,7 +252,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="services" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-16 md:py-24 lg:py-28">
+      <section id="services" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-11 md:py-16 lg:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
             Services
@@ -305,7 +305,7 @@ function Index() {
         </ul>
       </section>
 
-      <section id="testimonials" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-16 md:py-24 lg:py-28">
+      <section id="testimonials" className="mx-auto max-w-[1400px] scroll-mt-24 px-4 py-11 md:py-16 lg:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-extrabold tracking-tight text-[#0f4d3a] sm:text-5xl">
             Testimonials
