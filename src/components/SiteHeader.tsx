@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, MapPin } from "lucide-react";
+import { Link, useRouterState, useNavigate } from "@tanstack/react-router";
 import logoAsset from "@/assets/logo-tatenergy-transparent.png.asset.json";
 
 const NAV_ITEMS = [
-  { label: "Home", href: "#hero" },
-  { label: "Services", href: "#services" },
-  { label: "Why Choose Us", href: "#why-choose-us" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Home", section: "hero" },
+  { label: "Services", section: "services" },
+  { label: "Why Choose Us", section: "why-choose-us" },
+  { label: "Testimonials", section: "testimonials" },
 ];
 
 const PHONE_DISPLAY = "+1 (240) 886-1465";
