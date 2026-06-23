@@ -12,55 +12,49 @@ type Testimonial = {
 const TESTIMONIALS: Testimonial[] = [
   {
     id: "1",
-    name: "Sarah Mitchell",
-    location: "Bethesda, MD",
+    name: "Andrey Pershin",
     review:
-      "My fridge stopped cooling on a Saturday morning and they were at my door by the afternoon. Honest pricing and fixed it on the first visit. Couldn't ask for better service.",
+      "Professional, fast, and honest. Clear diagnosis, transparent pricing, and quality repair. Very satisfied with the result",
     rating: 5,
     order: 1,
   },
   {
     id: "2",
-    name: "David Hernandez",
-    location: "Silver Spring, MD",
+    name: "Rail",
     review:
-      "Technician was professional, walked me through the issue with my washer, and gave me a fair quote up front. Repair was quick and the machine has worked perfectly since.",
+      "He is a very good technician, he did an excellent job, a true professional. He's the best technician I've had in a long time; he solved all the problems with the repair of my household appliances!",
     rating: 5,
     order: 2,
   },
   {
     id: "3",
-    name: "Emily Carter",
-    location: "Rockville, MD",
+    name: "mark Minich",
     review:
-      "Called for an oven repair and they had it running again the same day. No hidden fees, no upsell — just great work. I'll definitely call them again.",
+      "Our refrigerator stopped working for no apparent reason. Damir showed up early and was able to quickly diagnose the problem with our Sub Zero 685 Refrigerator and fixed the problem effortlessly. He even recalibrated some of the temp settings for no charge. I would recommend him highly for repairs of this nature.",
     rating: 5,
     order: 3,
   },
   {
     id: "4",
-    name: "Michael Thompson",
-    location: "Columbia, MD",
+    name: "Alexey Kondratenko",
     review:
-      "Got my dishwasher repaired after another company quoted me a replacement. Saved me hundreds. Super knowledgeable team — highly recommend.",
+      "My whirlpool dryer wasn't working. The technician arrived very quickly and diagnosed the problem. He had all the necessary new parts in stock, and he installed them right away, bringing my dryer back to life. Thank you, I'll be in touch in the future.",
     rating: 5,
     order: 4,
   },
   {
     id: "5",
-    name: "Jessica Nguyen",
-    location: "Annapolis, MD",
+    name: "yoseph kinfu",
     review:
-      "Wine cooler was warming up and they diagnosed and fixed it in one trip. Clean, courteous, and on time. Five stars.",
+      "Excellent service! The team arrived on time, quickly diagnosed the issue, and fixed it immediately. Their professionalism and efficiency were outstanding. I highly recommend TATENERGY! ⭐️⭐️⭐️⭐️⭐️",
     rating: 5,
     order: 5,
   },
   {
     id: "6",
-    name: "Robert Patel",
-    location: "Frederick, MD",
+    name: "Alexsander Kurepkin",
     review:
-      "Dryer wasn't heating and they came out the next morning. Friendly tech, fair price, no surprises. This is my go-to appliance repair company now.",
+      "I was delighted. It was a surprise. I've had appliances break down before. But the technician arrived the next day. And after diagnostics, it turned out he had the right part for my dishwasher. This is the first time I haven't had to wait several days.\nThank you",
     rating: 5,
     order: 6,
   },
