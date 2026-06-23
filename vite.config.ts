@@ -12,4 +12,7 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Target Vercel's serverless/edge runtime so the build emits .output and env vars
+  // configured in the Vercel dashboard are injected into both SSR and client bundles.
+  nitro: { preset: "vercel" },
 });
