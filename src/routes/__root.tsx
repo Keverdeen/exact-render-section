@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import ogImage from "@/assets/og-appliance-repair.jpg";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/SiteHeader";
 
