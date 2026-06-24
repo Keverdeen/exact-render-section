@@ -78,19 +78,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Pixel Perfect Hero recreates a precise website hero section from a screenshot." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Pixel Perfect Hero recreates a precise website hero section from a screenshot." },
+      { title: "TATENERGY Appliance Repair" },
+      { name: "description", content: "Fast and reliable appliance repair and maintenance across Maryland. Certified technicians for refrigerators, washers, ovens, dishwashers and more." },
+      { name: "author", content: "TATENERGY" },
+      { property: "og:title", content: "TATENERGY Appliance Repair" },
+      { property: "og:description", content: "Fast and reliable appliance repair and maintenance across Maryland. Certified technicians for refrigerators, washers, ovens, dishwashers and more." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Pixel Perfect Hero recreates a precise website hero section from a screenshot." },
+      { name: "twitter:title", content: "TATENERGY Appliance Repair" },
+      { name: "twitter:description", content: "Fast and reliable appliance repair and maintenance across Maryland. Certified technicians for refrigerators, washers, ovens, dishwashers and more." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7cbe4639-6f6a-48f0-889f-a7090ea79ccb/id-preview-0661ecb7--f8be9052-d03f-469f-bf0b-33970dc7b251.lovable.app-1782304338740.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7cbe4639-6f6a-48f0-889f-a7090ea79ccb/id-preview-0661ecb7--f8be9052-d03f-469f-bf0b-33970dc7b251.lovable.app-1782304338740.png" },
     ],
+
     links: [
       {
         rel: "stylesheet",
