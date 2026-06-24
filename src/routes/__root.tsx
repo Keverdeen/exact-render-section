@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import ogImage from "@/assets/og-appliance-repair.jpg";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/SiteHeader";
 
@@ -87,8 +88,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "TATENERGY Appliance Repair" },
       { name: "twitter:description", content: "Fast and reliable appliance repair and maintenance across Maryland. Certified technicians for refrigerators, washers, ovens, dishwashers and more." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7cbe4639-6f6a-48f0-889f-a7090ea79ccb/id-preview-0661ecb7--f8be9052-d03f-469f-bf0b-33970dc7b251.lovable.app-1782304338740.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7cbe4639-6f6a-48f0-889f-a7090ea79ccb/id-preview-0661ecb7--f8be9052-d03f-469f-bf0b-33970dc7b251.lovable.app-1782304338740.png" },
+      { property: "og:image", content: ogImage },
+      { name: "twitter:image", content: ogImage },
     ],
 
     links: [
